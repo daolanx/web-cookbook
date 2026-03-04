@@ -1,11 +1,26 @@
 # web-cookbook
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+A Next.js documentation website built with [Fumadocs](https://fumadocs.dev).
 
-Run development server:
+## Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/daolanx/web-cookbook.git
+cd web-cookbook
+
+# Install dependencies
+npm install
+# or
+pnpm install
+# or
+yarn install
+```
+
+## Quick Start
+
+```bash
+# Start development server
 npm run dev
 # or
 pnpm dev
@@ -13,7 +28,25 @@ pnpm dev
 yarn dev
 ```
 
-Open http://localhost:3000 with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Build for Production
+
+```bash
+# Create production build
+npm run build
+# or
+pnpm build
+# or
+yarn build
+
+# Start production server
+npm start
+# or
+pnpm start
+# or
+yarn start
+```
 
 ## Explore
 
