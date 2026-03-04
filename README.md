@@ -1,45 +1,94 @@
 # web-cookbook
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+A Next.js documentation website built with [Fumadocs](https://fumadocs.dev).
 
-Run development server:
+## Overview
+
+web-cookbook is a modern documentation site powered by Next.js and Fumadocs. It provides a clean, fast, and searchable documentation experience.
+
+## Features
+
+- 📚 **MDX Support** - Write documentation in Markdown with React components
+- 🔍 **Full-text Search** - Fast search functionality for finding content
+- 🎨 **Customizable Themes** - Light and dark mode support
+- 📱 **Responsive Design** - Works on desktop and mobile
+- ⚡ **Fast Performance** - Built on Next.js App Router
+
+## Quick Start
 
 ```bash
+# Install dependencies
+npm install
+# or
+pnpm install
+# or
+yarn install
+
+# Start development server
 npm run dev
-# or
-pnpm dev
-# or
-yarn dev
 ```
 
-Open http://localhost:3000 with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Explore
+## Project Structure
 
-In the project, you can see:
+```
+web-cookbook/
+├── app/                    # Next.js App Router pages
+│   ├── (home)/            # Landing page route group
+│   ├── docs/              # Documentation pages
+│   ├── api/               # API routes (search, etc.)
+│   └── layout.tsx         # Root layout
+├── content/               # Documentation content (MDX files)
+├── lib/                   # Core libraries
+│   ├── source.ts          # Fumadocs content source adapter
+│   └── layout.shared.tsx  # Shared layout configuration
+├── public/                # Static assets
+├── source.config.ts       # Fumadocs configuration
+└── next.config.*          # Next.js configuration
+```
 
-- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
+## Documentation
 
-| Route                     | Description                                            |
-| ------------------------- | ------------------------------------------------------ |
-| `app/(home)`              | The route group for your landing page and other pages. |
-| `app/docs`                | The documentation layout and pages.                    |
-| `app/api/search/route.ts` | The Route Handler for search.                          |
+Documentation is written in MDX and stored in the `content/` directory. Each `.mdx` file becomes a page in the docs section.
 
-### Fumadocs MDX
+### Adding New Pages
 
-A `source.config.ts` config file has been included, you can customise different options like frontmatter schema.
+1. Create a new `.mdx` file in `content/`
+2. Add frontmatter:
 
-Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
+```markdown
+---
+title: My Page Title
+description: A brief description
+---
 
-## Learn More
+# My Content
+```
 
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.dev) - learn about Fumadocs
+- **Framework**: [Next.js 14+](https://nextjs.org/)
+- **Documentation**: [Fumadocs](https://fumadocs.dev)
+- **Styling**: Tailwind CSS
+- **Content**: MDX
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+MIT License - see the LICENSE file for details.
+
+## Resources
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Fumadocs Documentation](https://fumadocs.dev)
+- [MDX Documentation](https://mdxjs.com)
