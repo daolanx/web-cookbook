@@ -86,3 +86,34 @@ The project uses `@opennextjs/cloudflare` with:
 - R2 incremental cache (configured in `open-next.config.ts`)
 - Wrangler for deployment (`wrangler.jsonc`)
 - Rewrites: `/docs/*.mdx` → `/llms.mdx/docs/*`
+
+## Git Workflow
+
+### Contribution Process
+
+1. **Bug/Issue Discovery** → Create a detailed GitHub Issue describing the problem
+2. **Fix Implementation** → Create a feature branch from `main`
+3. **PR Creation** → Create PR that links to the issue (use "Closes #N" in description)
+4. **Code Review** → Wait for review before merging
+5. **Merge** → Squash and merge to `main`
+
+### Branch Naming
+
+- `fix/[issue-name]` - Bug fixes
+- `feat/[feature-name]` - New features
+- `refactor/[name]` - Code refactoring
+
+### Commit Messages
+
+Use clear, descriptive commit messages following conventional commits:
+- `fix: resolve cloudflare build error`
+- `feat: add new documentation page`
+- `docs: update CLAUDE.md`
+
+### Important Rules
+
+- **NEVER commit directly to `main`** - Always use PR workflow
+- **Small fixes should also use PR** - No matter how small, use issue + PR
+- **Describe changes clearly** - Both in commits and PR descriptions
+- **ALL changes require review** - Never merge PR yourself, always wait for owner review
+- **Never push to merged branches** - After PR is merged, delete the branch and create new one for new changes
