@@ -115,3 +115,4 @@ Use clear, descriptive commit messages following conventional commits:
 - **NEVER commit directly to `main`** - Always use PR workflow
 - **Small fixes should also use PR** - No matter how small, use issue + PR
 - **Describe changes clearly** - Both in commits and PR descriptions
+- **ALL changes require review** - Never merge PR yourself, always wait for owner review
