@@ -117,3 +117,4 @@ Use clear, descriptive commit messages following conventional commits:
 - **Describe changes clearly** - Both in commits and PR descriptions
 - **ALL changes require review** - Never merge PR yourself, always wait for owner review
 - **Never push to merged branches** - After PR is merged, delete the branch and create new one for new changes
+- **Always sync main before creating branch** - Run `git fetch origin && git reset --hard origin/main` before creating a new branch to avoid extra commits
