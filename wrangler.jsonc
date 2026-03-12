@@ -2,6 +2,9 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"main": ".open-next/worker.js",
 	"name": "web-cookbook",
+	"build": {
+		"command": "pnpm opennextjs-cloudflare build"
+	},
 	"compatibility_date": "2026-02-24",
 	"compatibility_flags": [
 		"nodejs_compat",
