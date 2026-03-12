@@ -26,6 +26,12 @@ pnpm cf-typegen      # Generate Cloudflare types (wrangler types)
 pnpm lint            # Run Biome check
 pnpm format          # Run Biome format --write
 
+# Testing
+pnpm test            # Run unit tests (Vitest)
+pnpm test:watch     # Run unit tests in watch mode
+pnpm test:e2e       # Run e2e tests (Playwright)
+pnpm test:all       # Run all tests (unit + e2e)
+
 # Post-install
 pnpm postinstall     # Runs fumadocs-mdx (auto-run after install)
 ```
@@ -37,6 +43,7 @@ pnpm postinstall     # Runs fumadocs-mdx (auto-run after install)
 - **Deployment**: Cloudflare Pages via OpenNext.js
 - **Styling**: Tailwind CSS 4 with `@tailwindcss/postcss`
 - **Linting**: Biome
+- **Testing**: Vitest (unit) + Playwright (e2e), pre-commit hooks via simple-git-hooks
 
 ### Directory Structure
 
