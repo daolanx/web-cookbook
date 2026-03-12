@@ -116,3 +116,4 @@ Use clear, descriptive commit messages following conventional commits:
 - **Small fixes should also use PR** - No matter how small, use issue + PR
 - **Describe changes clearly** - Both in commits and PR descriptions
 - **ALL changes require review** - Never merge PR yourself, always wait for owner review
+- **Never push to merged branches** - After PR is merged, delete the branch and create new one for new changes
