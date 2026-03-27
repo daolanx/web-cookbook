@@ -9,7 +9,21 @@ import { gitConfig } from '@/lib/layout.shared';
 
 export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   const params = await props.params;
-  const page = source.getPage(params.slug);
+  const slug = params.slug;
+
+  // Handle index page (/docs)
+  if (!slug || slug.length === 0) {
+    return (
+      <DocsPage>
+        <DocsTitle>Web Cookbook</DocsTitle>
+        <DocsDescription className="mb-0">
+          Select a chapter from the sidebar to get started.
+        </DocsDescription>
+      </DocsPage>
+    );
+  }
+
+  const page = source.getPage(slug);
   if (!page) notFound();
 
   const MDX = page.data.body;
@@ -43,7 +57,16 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: PageProps<'/docs/[[...slug]]'>): Promise<Metadata> {
   const params = await props.params;
-  const page = source.getPage(params.slug);
+  const slug = params.slug;
+
+  if (!slug || slug.length === 0) {
+    return {
+      title: 'Web Cookbook',
+      description: 'Select a chapter from the sidebar to get started.',
+    };
+  }
+
+  const page = source.getPage(slug);
   if (!page) notFound();
 
   return {
