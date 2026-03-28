@@ -1,0 +1,50 @@
+---
+title: 06. AI Workflows
+description: Accelerating development and automating mundane tasks with Agentic AI and integrated workflows.
+---
+
+# Chapter Goals
+
+For an independent developer, **AI is your only "team member."** In 2025, the usage of AI has evolved from simple code completion to agentic workflows. This means you can delegate complex refactoring, documentation writing, and even end-to-end testing to AI.
+
+The goal of this chapter is to take you beyond simple prompt engineering, mastering how to configure AI editors, leverage the Model Context Protocol (MCP) to extend AI capabilities, and integrate AI agents into your daily development pipeline to achieve 10x personal output.
+
+---
+
+# Learning Resources
+
+## 🧠 AI-Native Editors & Tools
+Choosing the right tools is the first step to building a highly efficient workflow.
+
+* **[Cursor: The AI Code Editor](https://www.cursor.com/)** ⭐⭐⭐⭐⭐  
+  **Why:** Currently the top AI-integrated development environment. Its `Composer` mode and `Tab` completion can understand the context of the entire repository, making it the top choice for independent developers.
+* **[Claude Code (CLI)](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code)** ⭐⭐⭐⭐⭐  
+  **Why:** Anthropic's native command-line tool, excelling at complex cross-file refactoring. It is a top-tier agent for handling tedious, complex tasks.
+* **[v0.dev](https://v0.dev/)** ⭐⭐⭐⭐  
+  **Why:** Launched by Vercel, focusing on frontend UI generation. The Tailwind + shadcn/ui code it generates is of extremely high quality, making it a magic tool for rapidly building prototypes.
+
+## 🔌 Expanding AI Capabilities (MCP)
+Give AI the ability to operate in the external world through the Model Context Protocol (MCP).
+
+* **[Model Context Protocol (MCP) Guide](https://modelcontextprotocol.io/introduction)** ⭐⭐⭐⭐⭐  
+  **Why:** An open standard that allows AI to securely access your local files, databases, and even Figma designs.
+* **[Figma MCP Server](https://github.com/modelcontextprotocol/servers)** ⭐⭐⭐⭐  
+  **Why:** Automates design-to-code workflows. AI can directly read your Figma specifications and generate corresponding React components.
+
+## 🤖 Automated Workflows & Agents
+Deploy AI as a 24/7 online assistant.
+
+* **[OpenClaw (Peon)](https://github.com/CatchTheTide/OpenClaw)** ⭐⭐⭐⭐⭐  
+  **Why:** A flexible agent framework that can help monitor tasks and summarize workflows, serving as a digital avatar for independent developers.
+* **[Cline (formerly Claude Dev)](https://github.com/cline/cline)** ⭐⭐⭐⭐  
+  **Why:** A VS Code extension that allows AI to execute commands, edit files, and perform browser testing. It is an extremely powerful open-source agent plugin.
+
+---
+
+# Learning Objectives
+
+1.  **Context-Driven Development:** Learn how to use `.cursorrules` or project instruction sets to make AI adhere to your coding standards (such as using Next.js App Router and Tailwind CSS).
+2.  **AI-Assisted Refactoring:** Use Claude Code to perform "surgical" refactoring on legacy code or lengthy vanilla code.
+3.  **MCP Integration:** Configure and use an MCP server (such as Google Search or GitHub) to allow AI to fetch real-time information or directly manage your repositories.
+4.  **Prompt Chaining & Agents:** Master how to break large tasks into small ones, and utilize agentic AI (such as Cline or OpenClaw) to automatically complete the loop from requirements to testing.
+5.  **Final Goal:** Establish your own automated pipeline for a "One-Person Company": extract designs from Figma, generate UI through v0, write logic using Cursor, and let an AI agent complete the final unit tests.

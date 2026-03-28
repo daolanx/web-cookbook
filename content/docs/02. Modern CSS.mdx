@@ -1,0 +1,43 @@
+---
+title: 02. Using Modern CSS
+description: Writing scalable and maintainable styles without the bloat.
+---
+
+# Chapter Goals
+
+In the first chapter, we wrote raw, vanilla CSS. As your projects grow, you will quickly realize that naming CSS classes (like `.header-inner-wrapper`) and keeping track of them becomes one of the hardest parts of development.
+
+Modern CSS isn't just about new visual effects; it's about **efficiency and maintainability**. The goal of this chapter is to shift your mindset. We will explore how modern browser features and the "Utility-First" philosophy can help you write styles faster and keep your codebase clean.
+
+---
+
+# Learning Resources
+
+## 🧠 The Utility-First Mindset
+Before using any tools, it's crucial to understand *why* we are changing how we write CSS.
+
+* **[Tailwind CSS: Core Concepts](https://tailwindcss.com/docs/utility-first)** ⭐⭐⭐⭐⭐  
+  **Why:** Even if you don't use the standard Tailwind build process, this documentation is a masterclass in modern web design. Read the "Utility-First Fundamentals" to understand why composing small, single-purpose classes is often better than writing large custom CSS files.
+
+## ⚡ Twind: Tailwind in JS (The Tool)
+We choose Twind for practice because it gives you the power of Tailwind without the complex build setup (Webpack/Vite). It's perfect for quick prototyping and independent developers.
+
+* **[Twind Documentation](https://twind.style/)** ⭐⭐⭐⭐⭐  
+  **Why:** Your main tool for this chapter. Learn how to drop a single `<script>` tag into your HTML and instantly start using Tailwind classes. It is fast, lightweight, and works natively in the browser.
+
+## 🎨 Modern Native CSS Features
+You don't always need a framework. Modern browsers now have built-in features that used to require complex tools.
+
+* **[MDN: Using CSS Custom Properties (Variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)** ⭐⭐⭐⭐  
+  **Why:** Understanding CSS variables (`var(--main-color)`) is essential. They are the foundation of modern dark modes and dynamic theming, and they work perfectly alongside tools like Twind.
+* **[web.dev: CSS Nesting](https://developer.chrome.com/articles/css-nesting/)** ⭐⭐⭐  
+  **Why:** A quick read on how modern CSS allows you to nest rules (like SASS) natively in the browser.
+
+---
+
+# Learning Objectives
+
+1.  **Stop Naming Things:** Build a UI component without inventing a single custom CSS class name. Rely entirely on utility classes.
+2.  **Design Tokens:** Learn how to use spacing, typography, and color scales consistently, rather than guessing pixel values.
+3.  **Dynamic Theming:** Use native CSS variables to create a simple "Light/Dark mode" toggle for your page.
+4.  **Final Goal:** Rebuild the static page from Chapter 01 using Twind. Your `index.html` will look a bit more crowded with classes, but your `.css` file will be almost completely empty.

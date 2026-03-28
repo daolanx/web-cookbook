@@ -1,0 +1,64 @@
+---
+title: 04. Web Infrastructure
+description: Choosing the right cloud services and platforms to deploy and scale your independent projects.
+---
+
+# Chapter Goals
+
+Building a great web application is only half the journey. The other half is making it accessible to the world reliably, securely, and cost-effectively. For a freelance frontend developer with over a decade of experience, shifting to an independent model means your time and energy are your most expensive assets. You cannot afford to spend days managing servers or configuring load balancers.
+
+The goal of this chapter is to move beyond local development and understand modern cloud infrastructure. By focusing on Serverless architecture, Edge Computing, and Backend-as-a-Service (BaaS), you will learn how to deploy full-stack applications with maximum efficiency and keep operational costs near zero.
+
+---
+
+# Learning Resources
+
+## 🚀 Deployment & Edge Computing
+Where your code lives and how it reaches users globally. We focus entirely on serverless and edge platforms for zero-maintenance hosting.
+
+* **[Cloudflare Pages & Workers](https://pages.cloudflare.com/)** ⭐⭐⭐⭐⭐  
+  **Why:** The ultimate infrastructure for independent developers. It offers extremely generous free tiers, a blazing-fast global edge network, and seamless integration with their ecosystem (like R2 for object storage and KV for fast key-value data). 
+* **[Vercel](https://vercel.com/docs)** ⭐⭐⭐⭐⭐  
+  **Why:** As the creator of Next.js, Vercel offers the smoothest deployment experience possible. It handles Server-Side Rendering (SSR) and API routes automatically with zero configuration.
+* **[Render](https://render.com/)** ⭐⭐⭐⭐  
+  **Why:** When Serverless limits (like CPU timeouts) are too restrictive, Render is an excellent, developer-friendly platform for deploying traditional background workers, cron jobs, or containerized applications.
+
+## 🗄️ Database & Storage
+Stop writing boilerplate backend code. Use managed services that provide databases and APIs out-of-the-box.
+
+* **[Supabase](https://supabase.com/docs)** ⭐⭐⭐⭐⭐  
+  **Why:** A highly praised open-source Firebase alternative powered by PostgreSQL. It handles secure authentication, database management, and even vector storage, saving countless hours of backend setup.
+* **[Neon](https://neon.tech/)** ⭐⭐⭐⭐⭐  
+  **Why:** A fully managed, serverless Postgres database. It separates storage and compute, allowing for features like database branching (perfect for testing features before production).
+* **[Cloudflare D1](https://developers.cloudflare.com/d1/)** ⭐⭐⭐⭐  
+  **Why:** A lightweight, serverless SQLite database that runs at the edge. It is incredibly cost-effective and perfectly pairs with modern ORMs like Drizzle for full-stack edge applications.
+
+## ✉️ Essential Services: Email & Payments
+The core business infrastructure to communicate with users and get paid.
+
+* **[Resend](https://resend.com/) & [React Email](https://react.email/)** ⭐⭐⭐⭐⭐  
+  **Why:** The modern standard for transactional emails. Build your email templates using React components, and deliver them via an API designed for developers.
+* **[Stripe](https://stripe.com/)** ⭐⭐⭐⭐⭐  
+  **Why:** The international gold standard for payments. 
+* **[Paddle](https://paddle.com/) & [Creem](https://www.creem.io/)** ⭐⭐⭐⭐  
+  **Why:** Fantastic Merchant of Record (MoR) alternatives if setting up a foreign corporate entity for Stripe is a barrier. They handle global taxes and compliance seamlessly.
+
+## 📊 Analytics, Monitoring & Dev Tools
+You cannot improve what you cannot measure, and you cannot fix what you cannot reproduce.
+
+* **[Umami](https://umami.is/) & [Plausible](https://plausible.io/)** ⭐⭐⭐⭐⭐  
+  **Why:** Simple, fast, and privacy-focused alternatives to Google Analytics. They give you clear insights into your traffic without data leaks or heavy cookie banners.
+* **[Sentry](https://sentry.io/)** ⭐⭐⭐⭐⭐  
+  **Why:** Essential for application monitoring. It tracks errors, crashes, and performance bottlenecks in real-time, allowing you to fix bugs before your users even notice them.
+* **[ngrok](https://ngrok.com/)** ⭐⭐⭐⭐  
+  **Why:** A crucial tool for local development. It exposes your local server to the internet, which is absolutely necessary when testing webhooks from Stripe or OAuth providers.
+
+---
+
+# Learning Objectives
+
+1.  **The Serverless Paradigm:** Understand the difference between traditional server hosting and edge functions.
+2.  **Zero-Config Deployment:** Successfully deploy a Next.js web application to a global CDN (like Vercel or Cloudflare Pages) using a CI/CD pipeline linked to your Git repository.
+3.  **Database & Storage Integration:** Connect a modern ORM to a managed database (such as Neon or Supabase Postgres) and configure an object storage bucket (Cloudflare R2) for user uploads.
+4.  **Operational Awareness:** Integrate Sentry to catch runtime errors and Umami to track user visits.
+5.  **Final Goal:** Take a fully functional Next.js application and deploy it to the internet complete with a live database, secure authentication, error tracking, and a configured email service (Resend).

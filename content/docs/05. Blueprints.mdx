@@ -1,0 +1,57 @@
+---
+title: 06. Blueprints
+description: End-to-end production tech stacks mapped to real-world business models.
+---
+
+# Chapter Goals
+
+Choosing a tech stack is not about picking isolated tools; it is about orchestrating a cohesive system that maps directly to a business model. Selecting the wrong combination can lead to high monthly bills, poor SEO, or massive maintenance overhead that drains an independent developer's most valuable asset: time.
+
+The goal of this chapter is to provide three complete, production-ready technical blueprints. Instead of looking at tools in isolation, we look at full execution paths—from Domain and DNS down to Payments and Analytics—tailored specifically for Landing Pages, E-Commerce, and Full-Stack SaaS.
+
+---
+
+# Learning Resources
+
+## 🚀 Blueprint A: The High-Converting Landing Page
+**Business Model:** Portfolio sites, waitlists, marketing pages, or SEO content hubs.
+**Priorities:** Instant load speeds, 100/100 Lighthouse scores, zero cold starts, and zero running costs.
+
+* **🌐 Domain & DNS:** **Cloudflare Registrar** Provides cost-price domains without markup and top-tier DDoS protection out-of-the-box.
+* **🖥️ Web Server & Hosting:** **Astro** or **Next.js (Static)** on **Cloudflare Pages** Astro is the king of static content, generating zero client-side JavaScript by default. Paired with Cloudflare Pages, your site is distributed to hundreds of edge data centers globally for the cost of exactly $0.
+* **📦 Storage & Assets:** **Cloudflare R2** For serving images and downloadable lead magnets without paying standard S3 egress bandwidth fees.
+* **🔑 Auth & Users:** None required. Use **Resend** for waitlist email capture.
+* **📊 Analytics:** **Umami** (Self-hosted or Cloud)  
+    Lightweight, privacy-first, and does not require annoying cookie consent banners that kill conversion rates.
+
+## 🛒 Blueprint B: The Lean Digital Product Shop
+**Business Model:** Selling e-books, UI kits, boilerplates, or lightweight web tools.
+**Priorities:** Fast transactional capability, secure downloads, and zero global tax compliance headaches.
+
+* **🌐 Domain & DNS:** **Cloudflare Registrar**
+* **🖥️ Web Server & Hosting:** **Next.js** on **Vercel** or **Hono** on **Cloudflare Workers** Next.js provides excellent dynamic server rendering for dynamic pricing or localized content. If looking for raw speed on the edge, Hono on Cloudflare Workers delivers sub-millisecond API responses.
+* **📦 Database & Storage:** **Cloudflare D1** (SQLite) + **Cloudflare R2** Perfect for storing product catalogs and securely streaming purchased digital assets to buyers.
+* **🔑 Auth & Users:** **Supabase Auth** or **Magic Links** via Resend  
+    Keep the friction low. Allow users to log in instantly without managing complex password databases.
+* **💳 Payments & Billing:** **Lemon Squeezy** or **Paddle** Crucial for international digital goods. They act as a Merchant of Record (MoR), meaning they automatically handle global checkout taxes (like EU VAT), protecting independent developers from massive accounting liabilities.
+
+## 🦄 Blueprint C: The Heavyweight Full-Stack SaaS
+**Business Model:** B2B subscription software, heavy data-driven dashboards, or complex AI web applications.
+**Priorities:** Deep relational data handling, robust user management, and fine-grained subscription control.
+
+* **🌐 Domain & DNS:** **Cloudflare Registrar**
+* **🖥️ Web Server & Hosting:** **Next.js** + **OpenNext** on independent serverless infrastructure, or directly on **Vercel** (for the absolute best developer experience).  
+    Enables powerful hybrid setups combining static layouts with highly dynamic server-rendered dashboard routes.
+* **📦 Database & Storage:** **Neon Postgres** or **Supabase** Heavy-duty PostgreSQL is mandatory here. Neon allows compute to scale to zero when no one is using the app, keeping maintenance bills near $0 during the early MVP days.
+* **🔑 Auth & Users:** **Better Auth** or **NextAuth.js** Full control over user sessions, team management, and secure multi-tenant structures.
+* **💳 Payments & Billing:** **Stripe** The gold standard for programmatic subscription handling, recurring billing, dunning management, and customer billing portals.
+
+---
+
+# Learning Objectives
+
+1.  **Full-Lifecycle Thinking:** Master the ability to map a product from the moment a user types the URL to the moment they process a transaction.
+2.  **The Merchant of Record (MoR) Decision:** Learn why a pure Stripe integration might be a liability for small teams selling internationally compared to a MoR like Lemon Squeezy.
+3.  **Database Paradigm Selection:** Understand when to use lightweight edge databases for e-commerce versus rigid relational PostgreSQL systems for multi-tenant SaaS.
+4.  **Cost Auditing:** Calculate the exact monthly footprint of each blueprint to ensure an idle project costs virtually nothing while maintaining the ability to handle heavy traffic spikes.
+5.  **Final Goal:** Select a blueprint that perfectly aligns with your current project's monetization model and map out every single API endpoint and connection string needed to link these components together.
